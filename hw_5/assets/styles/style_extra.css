@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 20px 150px;
+}
+
+header {
+  background-color: #8da7be;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+#about-me {
+  display: flex;
+  align-items: center;
+}
+
+#about-me p {
+  margin: 20px;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+#about-me img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-right: 40px;
+}
+
+#education {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.flex-t {
+  display: flex;
+  justify-content: space-between;
+}
+
+#skills ul {
+  padding: 0;
+}
+
+#skills li {
+  display: inline-flex;
+  margin: 5px 5px 5px 0;
+  padding: 12px 25px;
+  background-color: #87919e;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#socials {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#socials ul {
+  padding: 0;
+}
+
+#socials li {
+  display: inline-flex;
+  margin: 0 10px;
+}
+
+#socials li a {
+  color: #000;
+  text-decoration: none;
+}
+
+#socials li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+}

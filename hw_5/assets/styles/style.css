@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+#header {
+  border-bottom: 1px solid #000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 970px;
+  margin: 0 auto;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+}
+
+.inner {
+  width: 970px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#hero .inner {
+  display: flex;
+  height: 497px;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#about-me {
+  height: 500px;
+  background-color: #f6f6f6;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#about-me h2 {
+  margin-bottom: 50px;
+}
+
+#about-me p {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#skills {
+  height: 564px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#skills h2 {
+  margin-bottom: 20px;
+}
+
+#skills p {
+  margin-bottom: 50px;
+}
+
+.flex-apps {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.flex-apps img {
+  margin-bottom: 25px;
+}
+
+.flex-apps span {
+  font-weight: 700;
+}
+
+span {
+  color: #828282;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+}
+
+.flex-apps span {
+  display: block;
+  margin-bottom: 60px;
+}
+
+.stars {
+  display: flex;
+  gap: 10px;
+}
+
+#portfolio {
+  height: 2268px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
+#portfolio h2 {
+  margin-bottom: 50px;
+}
+
+#portfolio a {
+  display: block;
+  color: black;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+#contacts {
+  height: 600px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#contacts h2 {
+  margin-bottom: 20px;
+}
+
+#contacts p {
+  margin-bottom: 60px;
+}
+
+#contacts span {
+  display: block;
+  color: #828282;
+  margin-top: 60px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  border-radius: 22px;
+  padding: 0 16px;
+  height: 44px;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
