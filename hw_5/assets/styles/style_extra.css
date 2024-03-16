@@ -2,7 +2,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  margin: 20px 150px;
+  padding: 20px 100px;
 }
 
 header {
@@ -41,6 +41,7 @@ header {
 .flex-t {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 #skills ul {
