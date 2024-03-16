@@ -140,6 +140,10 @@ span {
   margin-bottom: 50px;
 }
 
+a {
+  cursor: pointer;
+}
+
 #portfolio a {
   display: block;
   color: black;
@@ -183,6 +187,7 @@ button {
   height: 44px;
   border: none;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .socials {
