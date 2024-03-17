@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+#header {
+  border-bottom: 1px solid #000;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 31px 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #828282;
+  font-size: 18px;
+  padding: 30px 0;
+  letter-spacing: 0.36px;
+  transition: all 0.1s ease-in;
+}
+
+.menu li a:hover {
+  font-weight: 700;
+  transition: all 0.1s ease-in;
+}
+
+#active {
+  color: #000;
+}
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#hero h1 {
+  margin: 12px 0 44px 0;
+}
+
+#hero img {
+  width: 100%;
+}
+
+#about-me {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 100px 0;
+}
+
+#about-me h2 {
+  margin-bottom: 50px;
+}
+
+#about-me p {
+  margin-bottom: 30px;
+}
+
+#about-me p:last-of-type {
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#skills {
+  text-align: center;
+  padding: 100px 0;
+}
+
+#skills h2 {
+  margin-bottom: 14px;
+}
+
+#skills p {
+  margin-bottom: 48px;
+}
+
+.flex-apps {
+  display: flex;
+  justify-content: center;
+  gap: 95px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  margin-bottom: 25px;
+}
+
+.flex-apps span {
+  font-weight: 700;
+}
+
+span {
+  color: #828282;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+}
+
+.flex-apps span {
+  display: block;
+  margin-bottom: 60px;
+}
+
+.flex-apps div:last-of-type span {
+  margin-bottom: 80px;
+}
+
+.stars {
+  display: flex;
+  gap: 9px;
+}
+
+#portfolio {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 100px 0;
+}
+
+#portfolio h2 {
+  margin-bottom: 46px;
+}
+
+a {
+  cursor: pointer;
+}
+
+#portfolio div {
+  margin-bottom: 70px;
+}
+
+#portfolio div:last-of-type {
+  margin-bottom: 0;
+}
+
+#portfolio a {
+  display: block;
+  color: black;
+  margin-top: 40px;
+  font-size: 18px;
+  line-height: normal;
+}
+
+#portfolio img {
+  width: 100%;
+}
+
+#contacts {
+  text-align: center;
+  padding: 100px 0;
+}
+
+#contacts h2 {
+  margin-bottom: 15px;
+}
+
+#contacts p {
+  margin-bottom: 60px;
+}
+
+#contacts span {
+  display: block;
+  color: #828282;
+  margin-top: 60px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  border-radius: 22px;
+  padding: 0 16px;
+  height: 44px;
+  border: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+button:hover {
+  transform: scale(1.1);
+  color: #000;
+  background-color: #828282;
+  transition: all 0.1s ease-in;
+}
+
+button:active {
+  transform: scale(0.95);
+  transition: all 0.1s ease-in;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  transition: all 0.1s ease-in;
+}
+
+.socials img {
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.socials img:hover {
+  opacity: 0.5;
+  transition: all 0.1s ease-in;
+}
