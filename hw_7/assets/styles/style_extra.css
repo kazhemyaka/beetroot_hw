@@ -1,0 +1,154 @@
+* {
+  transition: all 0.1s ease-in;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  height: 100vh;
+  background-color: #3399cc;
+  border: 25px solid #2b81ac;
+  font-family: "Lucida Sans Unicode", sans-serif;
+}
+
+header {
+  max-width: 1170px;
+  margin: 0 auto;
+  font-size: 21px;
+  padding: 41px 0 37px 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.blocks {
+  font-size: 0;
+  width: 100%;
+}
+
+.blocks li {
+  display: inline-block;
+  padding: 26px 0;
+  border: 2px solid #fff;
+  text-align: center;
+  font-size: 22px;
+}
+
+.blocks div {
+  padding-top: 10px;
+  opacity: 0.7;
+}
+
+.blocks li:hover div {
+  opacity: 1;
+}
+
+.blocks i {
+  font-size: 42px;
+  vertical-align: middle;
+}
+
+.lisbon {
+  width: 50%;
+  background-color: #70b8db;
+}
+
+.lisbon:hover {
+  background-color: #3399cc;
+}
+
+.paris {
+  width: 25%;
+  background-color: #70dbdb;
+}
+
+.paris:hover {
+  background-color: #33cccc;
+}
+
+.belgrade {
+  width: 25%;
+  background-color: #b894b8;
+}
+
+.belgrade:hover {
+  background-color: #996699;
+}
+
+.venice {
+  width: 25%;
+  background-color: #c46767;
+}
+
+.venice:hover {
+  background-color: #cc3333;
+}
+
+.tel-aviv {
+  width: 25%;
+  background-color: #eb9580;
+}
+
+.tel-aviv:hover {
+  background-color: #e2674a;
+}
+
+.cair {
+  width: 25%;
+  background-color: #ffdb94;
+}
+
+.cair:hover {
+  background-color: #ffcc66;
+}
+
+.new-york {
+  width: 25%;
+  background-color: #b8dbb8;
+}
+
+.new-york:hover {
+  background-color: #99cc99;
+}
+
+.new-delhi {
+  width: 25%;
+  background-color: #94b8b8;
+}
+
+.new-delhi:hover {
+  background-color: #669999;
+}
+
+.san-francisco {
+  width: 50%;
+  background-color: #db94b8;
+}
+
+.san-francisco:hover {
+  background-color: #cc6699;
+}
+
+.tokyo {
+  width: 25%;
+  background-color: #70b894;
+}
+
+.tokyo:hover {
+  background-color: #339966;
+}
+
+.sydney {
+  width: 100%;
+  background-color: #9494b8;
+}
+
+.sydney:hover {
+  background-color: #666699;
+}
+
+footer {
+  margin-top: 35px;
+}
