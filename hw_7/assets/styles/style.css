@@ -25,6 +25,11 @@ header {
   line-height: 28px;
 }
 
+.menu ul li a:hover {
+  color: #f90;
+  transition: 0.1s ease-in-out;
+}
+
 #active {
   color: #f90;
 }
