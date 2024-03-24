@@ -94,6 +94,7 @@ main {
   transition: 0.3s ease-in-out;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .section__element::after {
@@ -203,7 +204,7 @@ main {
 
 @media (max-width: 768px) {
   .section__text {
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px;
     flex-direction: column;
   }
@@ -235,5 +236,39 @@ main {
   .section__button {
     width: 30px;
     height: 30px;
+  }
+
+  .section--architectural {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template:
+      "second second"
+      "third third"
+      "first fourth"
+      "sixth sixth"
+      "fifth fifth";
+  }
+
+  .section--still-life {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "first second"
+      "sixth sixth"
+      "third fourth"
+      "fifth fifth";
+  }
+
+  .section--portrait-and-fashion {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "first second"
+      "third second"
+      "fourth fifth"
+      "sixth fifth"
+      "sixth seventh"
+      "eighth eighth"
+      "ninth tenth";
   }
 }
