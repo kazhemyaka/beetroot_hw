@@ -197,7 +197,7 @@ main {
 
 @media (max-width: 768px) {
   .section__text {
-    font-size: 14px;
+    font-size: 12px;
     padding: 10px;
     flex-direction: column;
   }
