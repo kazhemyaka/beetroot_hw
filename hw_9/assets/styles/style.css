@@ -86,6 +86,12 @@ main {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.section__element:hover {
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
 }
 
 .section__img {
