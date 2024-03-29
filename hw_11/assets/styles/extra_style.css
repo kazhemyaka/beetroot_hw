@@ -1,20 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url(https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css);
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Gilroy", sans-serif;
   box-sizing: border-box;
 }
 
 .header {
   border-bottom: 1px solid #000;
-  max-width: 970px;
+  max-width: 945px;
   margin: 0 auto;
-  padding: 31px 0;
+  padding: 33px 0 35px 0;
 }
 
 .nav__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
 }
@@ -26,10 +26,12 @@ body {
   padding: 30px 0;
   letter-spacing: 0.36px;
   transition: all 0.1s ease-in;
+  font-weight: 700;
+  color: #828282;
 }
 
 .nav__link:hover {
-  font-weight: 700;
+  color: #000000;
   transition: all 0.1s ease-in;
 }
 
@@ -38,7 +40,7 @@ body {
 }
 
 .container {
-  max-width: 970px;
+  max-width: 945px;
   margin: 0 auto;
 }
 
@@ -50,25 +52,46 @@ h1 {
 }
 
 .hero__title {
-  margin: 12px 0 44px 0;
+  margin: 33px 0 44px 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.hero__text {
+  font-weight: 500;
+  padding-bottom: 15px;
+  padding-right: 10px;
+}
+
+.hero__lang {
+  font-size: 16px;
+  line-height: normal;
+  transform: rotate(-90deg) translateX(35px) translateY(20px);
+}
+
+.hero__lang--bold {
+  color: #000000;
+  font-weight: 700;
 }
 
 .hero__img {
   width: 100%;
+  margin-bottom: 104px;
 }
 
 .about-me {
   background-color: #f6f6f6;
   text-align: center;
-  padding: 100px 0;
+  padding: 120px 0 107px 0;
 }
 
 .about-me__title {
-  margin-bottom: 50px;
+  margin-bottom: 21px;
 }
 
 .about-me__text {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 
 .about-me__text:last-of-type {
@@ -85,38 +108,37 @@ h2 {
 p {
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
 }
 
 .skills {
   text-align: center;
-  padding: 100px 0;
+  padding: 91px 0 110px 0;
 }
 
 .skills__title {
-  margin-bottom: 14px;
+  margin-bottom: 54px;
 }
 
 .skills__text {
-  margin-bottom: 48px;
+  margin-bottom: 89px;
 }
 
 .skills__flex {
   display: flex;
   justify-content: center;
-  gap: 95px;
-  flex-wrap: wrap;
+  gap: 110px;
 }
 
 .app__logo {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 }
 
 .app__name {
   font-weight: 700;
   display: block;
-  margin-bottom: 60px;
+  margin-bottom: 38px;
 }
 
 span {
@@ -128,22 +150,31 @@ span {
 }
 
 .skills__app:last-of-type .app__name {
-  margin-bottom: 80px;
+  margin-bottom: 58.5px;
 }
 
 .app__stars {
   display: flex;
-  gap: 9px;
+  gap: 11px;
+}
+
+.app__stars img {
+  width: 21px;
+  height: 21px;
+}
+
+.portfolio .container {
+  max-width: 936px;
 }
 
 .portfolio {
   text-align: center;
   background-color: #f6f6f6;
-  padding: 100px 0;
+  padding: 107px 0 100px 0;
 }
 
 .portfolio__title {
-  margin-bottom: 46px;
+  margin-bottom: 52px;
 }
 
 a {
@@ -151,7 +182,7 @@ a {
 }
 
 .portfolio__work {
-  margin-bottom: 70px;
+  margin-bottom: 99px;
 }
 
 .portfolio__work:last-of-type {
@@ -172,39 +203,41 @@ a {
 
 .contacts {
   text-align: center;
-  padding: 100px 0;
+  padding: 114px 0 123px 0;
 }
 
 .contacts__title {
-  margin-bottom: 15px;
+  margin-bottom: 27px;
 }
 
 .contacts__text {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .contacts__text--span {
   display: block;
   color: #828282;
-  margin-top: 60px;
+  margin-top: 46px;
 }
 
 button {
   background-color: #000;
   color: #fff;
   font-weight: 700;
-  font-family: "Open Sans";
+  font-family: "Gilroy", sans-serif;
   font-size: 18px;
   font-style: normal;
   line-height: normal;
-  letter-spacing: 1.8px;
   border-radius: 22px;
-  padding: 0 16px;
+  padding: 0 30px;
   height: 44px;
   border: none;
-  margin-bottom: 30px;
   cursor: pointer;
   transition: all 0.1s ease-in;
+}
+
+.contacts__button {
+  margin-bottom: 86px;
 }
 
 button:hover {
@@ -222,7 +255,7 @@ button:active {
 .contacts__socials {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 60px;
   transition: all 0.1s ease-in;
 }
 
