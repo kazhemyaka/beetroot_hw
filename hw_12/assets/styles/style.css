@@ -1,0 +1,259 @@
+body {
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main__container {
+  padding: 70px 0 90px 0;
+}
+
+.container--flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.header__lang-and-nav {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+}
+
+.header__lang {
+  font-family: "Tourney", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.125rem;
+  letter-spacing: 0.041rem;
+}
+
+.header__lang--ng {
+  letter-spacing: 0.083rem;
+}
+
+.nav__list {
+  display: inline-flex;
+  font-family: "Staatliches", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.041rem;
+}
+
+.nav__link {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__item:not(:last-child)::after {
+  content: "/";
+  padding: 0 10px;
+}
+
+.aside {
+  width: 32.4%;
+  padding: 20px 10px 10px 10px;
+}
+
+.documentation {
+  width: 67.6%;
+  padding-top: 10px;
+}
+
+.documentation__chapter:not(:first-child) {
+  margin-top: 72px;
+}
+
+.chapter__heading {
+  font-family: "Francois One", sans-serif;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  line-height: 3rem;
+  letter-spacing: 0.089rem;
+}
+
+.chapter__heading {
+  margin-bottom: 40px;
+}
+
+.chapter__heading--aside {
+  padding-bottom: 10px;
+  margin-bottom: 70px;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.heading__sup {
+  font-family: "Farro", sans-serif;
+  font-size: 1.1rem;
+  text-transform: none;
+  font-weight: 300;
+  letter-spacing: 0.056rem;
+  line-height: normal;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.chapter__text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.chapter__text:not(:first-of-type) {
+  padding: 30px 0;
+}
+
+.link {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.span--italic {
+  font-style: italic;
+}
+
+.list__item {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.75rem;
+  line-height: 3rem;
+}
+
+.list__item:not(:first-of-type) {
+  padding-top: 40px;
+}
+
+.list__item::before {
+  content: "+";
+  font-weight: 700;
+}
+
+.span--bold {
+  font-weight: 700;
+}
+
+.chapter__code {
+  background-color: #dadada;
+  font-family: "PT Sans", sans-serif;
+}
+
+.aside__nav {
+  position: sticky;
+  top: 160px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.main {
+  margin-top: 70px;
+}
+
+.main--background {
+  background-image: url("../images/bg-picture.svg");
+  background-repeat: no-repeat;
+  background-position: top 148px right;
+  background-attachment: fixed;
+}
+
+.chapter__heading:not(.chapter__heading--aside)::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 8px;
+  background-color: #000;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 1.44px;
+}
+
+.companies__heading {
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.companies__heading::before {
+  content: "";
+  width: 100px;
+  height: 8px;
+  background-color: #000;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.companies__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 20px 15px;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.companies__card {
+  width: 270px;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.cards__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.cards__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.companies__card:hover .cards__inner {
+  transform: rotateY(180deg);
+}
+
+.cards__item--grey,
+.cards__item--black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.cards__item--grey {
+  background-color: #e6e6e6;
+}
+
+.cards__item--black {
+  background-color: #1a1a1a;
+  transform: rotateY(180deg);
+}
