@@ -183,11 +183,11 @@ body {
 }
 
 h1 {
-  font-family: Roboto;
-  font-size: 36px;
+  font-family: Roboto, sans-serif;
+  font-size: 2.25rem;
   font-weight: 600;
-  line-height: 48px;
-  letter-spacing: 1.44px;
+  line-height: 3rem;
+  letter-spacing: 0.09rem;
 }
 
 .companies__heading {
