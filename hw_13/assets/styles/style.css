@@ -34,6 +34,7 @@ body {
   font-weight: 400;
   line-height: 22px;
   letter-spacing: -0.2px;
+  border-radius: 6px;
 }
 
 h2 {
@@ -46,7 +47,7 @@ h2 {
   width: 100%;
   margin-top: 7px;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 6px;
   border: 1px solid #e4e4e4;
   transition: 0.2s ease-in-out;
 }
@@ -67,6 +68,9 @@ h2 {
 .form__notice {
   color: #969696;
   margin-top: 7px;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
 }
 
 .form__radio {
@@ -99,14 +103,14 @@ h2 {
 .form__radio + .form__label:after {
   content: "";
   position: absolute;
-  width: 23px;
-  height: 23px;
+  width: 21px;
+  height: 21px;
   border-radius: 50%;
   border: 6px solid #007bff;
   opacity: 0;
   box-sizing: border-box;
-  top: 0px;
-  left: 0px;
+  top: 0.5px;
+  left: 0.5px;
   transition: 0.2s ease-in-out;
 }
 
@@ -148,7 +152,7 @@ h2 {
 .form__button {
   background-color: #007bff;
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 8px 10px;
   font-family: Roboto;
   font-size: 15px;
   font-weight: 500;
@@ -158,6 +162,7 @@ h2 {
   border-radius: 6px;
   cursor: pointer;
   border: 1px solid #e4e4e4;
+  margin-top: -5px;
 }
 
 .form__footer {
@@ -196,6 +201,7 @@ h2 {
 .form__field--flex {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .form__file {
@@ -246,4 +252,9 @@ h2 {
 .form__button--update {
   margin-bottom: 104px;
   flex-basis: 30%;
+}
+
+.form__link--login {
+  margin-left: 17px;
+  font-weight: 500;
 }
