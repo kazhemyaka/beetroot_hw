@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-Forms</title>
+    <link rel="stylesheet" href="assets/styles/reset.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="main__container">
+        <section class="section__forms">
+          <form class="form">
+            <h2 class="form__title form__field--full">Create an Account</h2>
+            <div class="form__field form__field--half">
+              <label class="form__label" for="first-name">First name:</label>
+              <input
+                class="form__input"
+                type="text"
+                id="first-name"
+                name="first-name"
+                required
+              />
+            </div>
+            <div class="form__field form__field--half">
+              <label class="form__label" for="last-name">Last name:</label>
+              <input
+                class="form__input"
+                type="text"
+                id="last-name"
+                name="last-name"
+                required
+              />
+            </div>
+            <div class="form__field form__field--full">
+              <label class="form__label" for="email">E-mail:</label>
+              <input
+                class="form__input"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+              <p class="form__notice">
+                We'll never share your email with anyone else.
+              </p>
+            </div>
+            <div class="form__field form__field--full">
+              <input
+                class="form__radio"
+                type="radio"
+                name="gender"
+                id="male"
+                required
+              />
+              <label for="male" class="form__label">Male</label>
+              <input
+                class="form__radio"
+                type="radio"
+                name="gender"
+                id="female"
+              />
+              <label for="female" class="form__label">Female</label>
+            </div>
+            <div class="form__field form__field--half">
+              <label class="form__label" for="country">Country</label>
+              <select class="form__select" id="country" name="country" required>
+                <option value="">Select</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+              </select>
+            </div>
+            <div class="form__field form__field--half">
+              <label class="form__label" for="city">City</label>
+              <input
+                class="form__input"
+                type="text"
+                name="city"
+                id="city"
+                required
+              />
+            </div>
+            <button class="form__button form__field--full" type="submit">
+              Sign Up
+            </button>
+            <div class="form__footer form__field--full">
+              <p class="form__info">
+                By clicking the 'Sign Up' button, you confirm that you accept
+                our<br />
+                <a class="link form__link" href="#" target="_blank"
+                  >Terms of Use</a
+                >
+                and
+                <a class="link form__link" href="#" target="_blank"
+                  >Privacy Policy</a
+                >.
+              </p>
+              <p class="form__login">
+                Have an account? <a class="link form__link" href="#">Log In</a>
+              </p>
+            </div>
+          </form>
+          <form class="form">
+            <h2 class="form__title form__field--full">Profile</h2>
+            <div class="form__field form__field--full form__field--flex">
+              <img
+                src="assets/images/profile.png"
+                alt="Avatar"
+                class="form__avatar"
+              />
+              <div>
+                <div class="form__file-container">
+                  <input
+                    class="form__file"
+                    type="file"
+                    id="avatar"
+                    name="avatar"
+                    accept="image/png, image/jpeg, image/webp"
+                  />
+                  <button class="form__button--reset" type="reset">
+                    <img src="assets/images/trash.svg" alt="Trash icon" />
+                  </button>
+                </div>
+                <label class="form__label" for="avatar"
+                  >Up to 1 MB (300x300 px)</label
+                >
+              </div>
+            </div>
+            <div class="form__field form__field--half">
+              <label class="form__label" for="name">Name</label>
+              <input
+                class="form__input"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+            <div class="form__field form__field--half">
+              <label class="form__label" for="email">E-mail</label>
+              <input
+                class="form__input"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+            <div class="form__field form__field--half">
+              <label class="form__label" for="country">Country</label>
+              <select class="form__select" id="country" name="country" required>
+                <option value="">Select</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+              </select>
+            </div>
+            <div class="form__field form__field--half">
+              <label class="form__label" for="city">City</label>
+              <input
+                class="form__input"
+                type="text"
+                name="city"
+                id="city"
+                required
+              />
+            </div>
+            <div class="form__field form__field--half">
+              <label class="form__label" for="zipcode">Zip Code</label>
+              <input
+                class="form__input"
+                type="text"
+                id="zipcode"
+                name="zipcode"
+                required
+              />
+            </div>
+            <div class="form__field form__field--half">
+              <label class="form__label" for="phone">Phone Number</label>
+              <input
+                class="form__input"
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+              />
+            </div>
+            <button type="submit" class="form__button form__button--update">
+              Update
+            </button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
