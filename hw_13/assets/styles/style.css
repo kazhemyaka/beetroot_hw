@@ -149,6 +149,10 @@ h2 {
   color: #969696;
 }
 
+.form__select:valid {
+  color: #545454;
+}
+
 .form__button {
   background-color: #007bff;
   color: #ffffff;
