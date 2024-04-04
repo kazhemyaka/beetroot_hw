@@ -229,7 +229,7 @@ h2 {
 .form__file::before {
   content: "";
   display: inline-block;
-  padding-right: 20px;
+  padding-right: 100px;
 }
 
 .form__button--reset {
