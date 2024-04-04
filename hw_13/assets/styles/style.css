@@ -222,14 +222,9 @@ h2 {
   height: 30px;
 }
 
-.form__file::-webkit-file-upload-button {
+.form__file::file-selector-button {
   visibility: hidden;
-}
-
-.form__file::before {
-  content: "";
-  display: inline-block;
-  padding-right: 100px;
+  padding-right: 200px;
 }
 
 .form__button--reset {
