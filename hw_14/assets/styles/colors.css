@@ -1,0 +1,19 @@
+:root {
+  --dark-green: #52c29d;
+  --middle-green: #caeff2;
+  --light-green: #e1f4f5;
+  --lighten-green: #f4feff;
+  --dark-blue: #007ffc;
+  --middle-blue: #b9dcff;
+  --light-blue: #d1e7ff;
+  --lighten-blue: #e8f3ff;
+  --text: #16133d;
+  --subtext: #7690a8;
+  --border: #e5eaf4;
+  --icon-border: rgba(21, 101, 216, 0.1);
+  --link: #3db370;
+  --hover-border: #3db370;
+  --footer-bg: #16133d;
+  --socials-bg: #efeef3;
+  --socials-hover: #3db370;
+}

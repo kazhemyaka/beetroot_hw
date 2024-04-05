@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  border-bottom: 1px solid #efeef3;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.header__logo {
+  padding: 22.5px 0;
+}
+
+.main__container {
+  padding: 100px 0;
+}
+
+.service__subtitle {
+  color: var(--subtext);
+  text-transform: uppercase;
+  padding-left: 3px;
+  line-height: 21px;
+  margin-bottom: 13px;
+}
+
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  line-height: 3.25rem;
+  font-size: 2.5rem;
+}
+
+.service__title {
+  margin-bottom: 32px;
+}
+
+.service__cards {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.service__card {
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: 0.3s ease-in-out;
+}
+
+.service__card:hover {
+  border: 1px solid var(--hover-border);
+  transition: 0.3s ease-in-out;
+}
+
+.card__icon-container {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  border: 1px solid var(--icon-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.card__heading {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  line-height: 1.33rem;
+  letter-spacing: 0.013rem;
+}
+
+.card__text {
+  line-height: 1.75rem;
+}
+
+.link {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card__link {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.card__icon path {
+  transition: 0.3s ease-in-out;
+}
+
+.service__card:hover #building-1,
+.service__card:hover #megaphone-1,
+.service__card:hover #megaphone-2,
+.service__card:hover #megaphone-5,
+.service__card:hover #phone-1,
+.service__card:hover #phone-5,
+.service__card:hover #phone-6 {
+  fill: var(--light-green);
+}
+
+.service__card:hover #building-2,
+.service__card:hover #building-4,
+.service__card:hover #building-5,
+.service__card:hover #megaphone-4,
+.service__card:hover #megaphone-6,
+.service__card:hover #megaphone-7,
+.service__card:hover #phone-2,
+.service__card:hover #phone-4 {
+  fill: var(--middle-green);
+}
+
+.service__card:hover #building-3,
+.service__card:hover #megaphone-3,
+.service__card:hover #phone-3 {
+  fill: var(--lighten-green);
+}
+
+.service__card:hover #building-7,
+.service__card:hover #megaphone-8,
+.service__card:hover #phone-7 {
+  fill: var(--dark-green);
+}
+
+.footer {
+  margin-top: auto;
+  background-color: var(--footer-bg);
+  height: 100%;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.socials__icons {
+  display: flex;
+  column-gap: 10px;
+}
+
+.socials__icon {
+  width: 38px;
+  height: 38px;
+  background-color: var(--socials-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.socials__icon:hover .icon__svg {
+  fill: var(--socials-hover);
+  transition: 0.3s ease-in-out;
+}
+
+.icon__svg {
+  width: 20px;
+  height: 20px;
+  fill: #0d0d0d;
+  transition: 0.3s ease-in-out;
+}
