@@ -1,0 +1,108 @@
+line-width = 100px
+
+border-position(position)
+  border-{position} 1px solid gold-color
+  {position} 0
+
+container-size()
+  content ''
+  position absolute
+  width line-width
+  height line-width
+
+.our-team
+  width 1030px
+  margin 0 auto
+
+  &__member
+    flex-center()
+
+  &__wrapper
+    width 430px
+    height 430px
+    position relative
+
+    &::before,
+    &::after
+      container-size()
+      top 0
+      border-top 1px solid gold-color
+
+    &::before
+      border-position(left)
+
+    &::after
+      border-position(right)
+
+  &__inner
+    padding 15px
+
+    &::before,
+    &::after
+      container-size()
+      bottom 0
+      border-bottom 1px solid gold-color
+
+    &::before
+      border-position(left)
+
+    &::after
+      border-position(right)
+
+  &__photo
+    flex-basis 50%
+
+  &__info
+    flex-basis 50%
+    padding 70px 0 70px 85px
+    text-align center
+    border-left 1px solid gold-color
+
+  &__name
+    text-transform capitalize
+    color grey-color
+
+    &::after
+      empty-content-block()
+      width 100px
+      height 1px
+      background-color gold-color
+      margin 23px auto 30px
+
+  &__position
+    font-family 'Raleway', sans-serif
+    font-size 1.5rem
+    line-height 2.25rem
+    color grey-color
+    text-transform capitalize
+    margin-bottom 20px
+
+  &__socials
+    flex-center()
+    column-gap 5px
+    margin-bottom 49px
+
+  &__text
+    font-family 'Raleway', sans-serif
+    color black-color
+    font-size 0.875rem
+    line-height 1.5rem
+    font-weight 500
+
+    &::after
+      empty-content-block()
+      margin 16px auto 25px
+      width 50px
+      height 4px
+      background-color repeating-linear-gradient(90deg, gold-color 0, gold-color 10px, transparent 10px, transparent 15px, gold-color 15px, gold-color 35px, transperent 35px transperent 40px gold-color 40px gold-color 50px)
+
+  &__button
+    display inline-block
+    padding 5px 10px
+    font-family 'Open Sans', sans-serif
+    font-size 0.875rem
+    font-weight 700
+    text-transform uppercase
+    text-decoration none
+    border 1px solid gold-color
+    color gold-color

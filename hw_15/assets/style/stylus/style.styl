@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+@import 'reset'
+
+*
+  box-sizing border-box
+
+flex-center()
+  display flex
+  justify-content center
+  align-items center
+
+empty-content-block()
+  content ''
+  display block
+
+body
+  flex-center()
+  height 100vh
+  font-family 'Roboto', sans-serif
+  font-size 16px
+
+.container
+  width 1170px
+  margin 0 auto
+
+subtitle = #898f8f
+gold-color = #fc0
+grey-color = #666
+black-color = #333
+
+h1
+  color gold-color
+  font-size 3.75rem
+  font-weight 900
+  line-height 4.125rem
+  text-transform uppercase
+
+h2
+  color grey-color
+  font-size 2.25rem
+  font-weight 900
+  line-height normal
+
+@import 'header'
+@import 'member'
