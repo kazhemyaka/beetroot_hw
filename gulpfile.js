@@ -1,47 +1,14 @@
-// import gulp from "gulp";
-// import less from "gulp-less";
-// import browserSync from "browser-sync";
-// const reload = browserSync.reload;
-// import autoprefixer from "gulp-autoprefixer";
-
-// /* Task to compile less */
-// gulp.task("compile-less", function () {
-//   return gulp
-//     .src("./hw_15/assets/style/less/style.less")
-//     .pipe(less())
-//     .pipe(autoprefixer())
-//     .pipe(gulp.dest("./hw_15/assets/style/css/"));
-// });
-// /* Task to watch less changes */
-// gulp.task("watch-less", function () {
-//   gulp.watch("./hw_15/assets/style/**/*.less", gulp.series("compile-less"));
-// });
-
-// gulp.task("serve", function () {
-//   // Serve files from the root of this project
-//   browserSync.init({
-//     server: {
-//       baseDir: "./",
-//     },
-//   });
-//   gulp.watch("./hw_15/assets/style/**/*.less").on("change", reload);
-//   gulp.watch("./hw_15/*.html").on("change", reload);
-// });
-
-// /* Task when running `gulp` from terminal */
-// gulp.task("default", gulp.series("watch-less", "serve"));
-
 const { src, dest, watch, series } = require("gulp");
-const less = require("gulp-less");
+const sass = require("gulp-sass")(require("sass"));
 const browsersync = require("browser-sync").create();
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 
-function lessTask() {
-  return src("./hw_15/assets/style/less/style.less")
-    .pipe(less())
+function sassTask() {
+  return src("./hw_16/assets/styles/scss/style.scss")
+    .pipe(sass())
     .pipe(postcss([autoprefixer()]))
-    .pipe(dest("./hw_15/assets/style/css/"));
+    .pipe(dest("./hw_16/assets/styles/css/"));
 }
 
 function browsersyncServe(cb) {
@@ -59,8 +26,8 @@ function browsersyncReload(cb) {
 }
 
 function watchTask() {
-  watch("./hw_15/*.html", browsersyncReload);
-  watch("./hw_15/assets/style/**/*.less", series(lessTask, browsersyncReload));
+  watch("./hw_16/*.html", browsersyncReload);
+  watch("./hw_16/assets/styles/**/*.scss", series(sassTask, browsersyncReload));
 }
 
-exports.default = series(lessTask, browsersyncServe, watchTask);
+exports.default = series(sassTask, browsersyncServe, watchTask);

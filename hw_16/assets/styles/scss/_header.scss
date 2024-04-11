@@ -1,0 +1,51 @@
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 34px;
+    margin: 0 auto;
+    gap: 20px;
+
+    @include tablet() {
+      padding: 20px 34px;
+    }
+
+    @include mobile() {
+      padding: 20px 10px;
+    }
+  }
+
+  &__logo {
+    width: 142px;
+    height: 12px;
+  }
+
+  &__icon {
+    width: 17px;
+    height: 16px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 84px;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: 32px;
+    font-size: remify(14px);
+    text-transform: uppercase;
+    letter-spacing: remify(4.2px);
+
+    @include tablet() {
+      display: none;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $black-color;
+  }
+}

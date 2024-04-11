@@ -1,0 +1,117 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import "reset";
+
+* {
+  box-sizing: border-box;
+}
+
+$black-color: #000;
+$white-color: #fff;
+$grey-color: #7b7b7b;
+$grey-darker-color: #565656;
+$light-grey-color: #f4f4f4;
+
+html {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  color: $black-color;
+}
+
+@mixin tablet() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+.container {
+  max-width: 1238px;
+  margin: 0 auto;
+  padding: 0 34px;
+
+  @include mobile() {
+    padding: 0 10px;
+  }
+}
+
+.main {
+  margin-bottom: 90px;
+}
+
+@function remify($value) {
+  $base-value: 16px;
+  $rem-value: math.div($value, $base-value);
+  @return $rem-value * 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+h1 {
+  font-size: clamp(remify(30px), 4vw + 1rem, remify(48px));
+  font-weight: 600;
+  line-height: remify(64px);
+  letter-spacing: remify(2.4px);
+
+  @include tablet() {
+    line-height: remify(50px);
+    letter-spacing: remify(1.8px);
+  }
+
+  @include mobile() {
+    letter-spacing: remify(1.5px);
+  }
+}
+
+h2 {
+  font-size: remify(48px);
+  line-height: remify(48px);
+  letter-spacing: remify(2.4px);
+
+  @include mobile() {
+    text-align: center;
+  }
+}
+
+h3 {
+  font-size: remify(28px);
+  font-weight: 600;
+  line-height: 166%;
+  letter-spacing: remify(2.8px);
+}
+
+h4 {
+  font-size: remify(23px);
+  font-weight: 500;
+  line-height: 166%;
+  letter-spacing: remify(2.3px);
+}
+
+.btn {
+  font-family: "Lato", sans-serif;
+  color: $white-color;
+  background-color: $grey-darker-color;
+  line-height: 166%;
+  letter-spacing: remify(1.6px);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 9.5px 45px;
+}
+
+@import "header";
+@import "hero";
+@import "blog";
+@import "posts";
+@import "popular";
+@import "info";
+@import "footer";

@@ -1,0 +1,46 @@
+.info {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet() {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__paragraph {
+    font-size: remify(19px);
+    line-height: remify(32px);
+    letter-spacing: remify(0.95px);
+  }
+
+  &__heading {
+    font-weight: 400;
+    flex-basis: 60%;
+
+    &::after {
+      content: url("../../images/arrow-text.svg");
+      display: block;
+    }
+  }
+
+  &__text {
+    flex-basis: 40%;
+
+    @include tablet() {
+      margin-top: 50px;
+      text-align: right;
+    }
+
+    @include mobile() {
+      text-align: left;
+    }
+  }
+
+  &__heading,
+  &__text {
+    @include tablet() {
+      flex: 0 0 100%;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.popular {
+  &__container {
+    @extend .posts__container;
+  }
+
+  &__heading-container {
+    @extend .posts__heading-container;
+  }
+
+  &__view-link {
+    @extend .posts__view-link;
+  }
+
+  &__articles {
+    display: flex;
+    gap: 30px;
+
+    @include mobile() {
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+  }
+
+  &__article {
+    flex-basis: 50%;
+    gap: 20px;
+
+    @include mobile() {
+      flex-wrap: wrap;
+      flex-basis: 100%;
+    }
+  }
+
+  &__btn {
+    display: block;
+    align-self: center;
+  }
+}
+
+.article {
+  &__text-container--popular {
+    @extend .article__text-container--posts;
+  }
+
+  &__tags,
+  &__date {
+    &--popular {
+      @extend .article__tags--posts, .article__date--posts;
+    }
+  }
+
+  &__tags-and-date--popular {
+    margin-top: 20px;
+  }
+
+  &__heading {
+    &--popular {
+      @extend .article__heading--posts;
+    }
+  }
+}

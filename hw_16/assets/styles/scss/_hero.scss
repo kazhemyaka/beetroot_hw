@@ -1,0 +1,28 @@
+.hero {
+  height: 600px;
+  width: 100%;
+  background-image: url("../../images/bg-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include tablet() {
+    height: 320px;
+  }
+
+  @include mobile() {
+    height: 500px;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__heading {
+    margin-top: 100px;
+
+    @include tablet() {
+      margin-top: 40px;
+    }
+  }
+}

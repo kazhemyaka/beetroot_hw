@@ -1,0 +1,118 @@
+.posts {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include mobile() {
+      gap: 30px;
+    }
+
+    margin-bottom: 90px;
+  }
+
+  &__heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    @include mobile() {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__view-link {
+    color: $grey-color;
+    line-height: 166%;
+    letter-spacing: remify(1.6px);
+    text-decoration: none;
+
+    &::after {
+      content: url("../../images/arrow-text.svg");
+      margin-left: 20px;
+    }
+  }
+
+  &__articles {
+    display: flex;
+    gap: 30px;
+
+    @include tablet() {
+      flex-wrap: wrap;
+    }
+
+    @include mobile() {
+      gap: 50px;
+    }
+  }
+
+  &__article {
+    flex-basis: 33%;
+    gap: 20px;
+
+    @include tablet() {
+      display: flex;
+      flex: 0 0 100%;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    @include mobile() {
+      flex-wrap: wrap-reverse;
+    }
+  }
+}
+
+.article {
+  &__tags-and-date {
+    display: flex;
+    justify-content: space-between;
+    font-size: remify(12px);
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    @include tablet() {
+      margin-top: 0;
+    }
+  }
+
+  &__tags,
+  &__date {
+    &--posts {
+      margin: 0;
+    }
+  }
+
+  &__text-container--posts {
+    padding: 0;
+
+    @include tablet() {
+      align-self: flex-start;
+    }
+  }
+
+  &__text--noarrow {
+    &::after {
+      content: none;
+    }
+  }
+
+  &__heading {
+    &--posts {
+      font-size: remify(22px);
+      letter-spacing: remify(2.2px);
+    }
+  }
+
+  &__img-container--posts,
+  &__text-container--posts {
+    flex-basis: 50%;
+
+    @include mobile() {
+      flex-basis: 100%;
+    }
+  }
+}

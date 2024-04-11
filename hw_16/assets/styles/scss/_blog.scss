@@ -1,0 +1,97 @@
+.blog {
+  &__container {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__article {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    @include tablet() {
+      gap: 20px;
+    }
+
+    @include mobile() {
+      flex-wrap: wrap-reverse;
+      flex-basis: 100%;
+    }
+  }
+}
+
+.article {
+  &__img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__img-container,
+  &__text-container {
+    flex-basis: 50%;
+
+    @include tablet() {
+      flex-basis: 100%;
+    }
+  }
+
+  &__text-container {
+    align-self: center;
+    padding-right: 120px;
+
+    &--reverse {
+      padding-left: 120px;
+      padding-right: 0;
+    }
+
+    @include tablet() {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__tags {
+    color: $grey-color;
+    line-height: 166%;
+    letter-spacing: remify(1.6px);
+    margin-bottom: 30px;
+
+    @include tablet() {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 15px;
+  }
+
+  &__date {
+    color: $grey-color;
+    line-height: 166%;
+    letter-spacing: remify(1.6px);
+    margin-bottom: 50px;
+
+    @include tablet() {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    color: $grey-color;
+    line-height: 166%;
+    letter-spacing: remify(0.8px);
+
+    &::after {
+      content: url("../../images/arrow-text.svg");
+      margin-left: 20px;
+    }
+  }
+}
