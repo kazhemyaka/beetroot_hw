@@ -1,17 +1,22 @@
 .hero {
   height: 600px;
   width: 100%;
-  background-image: url("../../images/bg-image.png");
+  background-image: url("../../images/desktop/bg-image.avif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @include tablet() {
+    background-image: url("../../images/tablet/bg-image.avif");
     height: 320px;
   }
 
   @include mobile() {
     height: 500px;
+  }
+
+  @media screen and (max-width: 440px) {
+    background-image: url("../../images/mobile/bg-image.avif");
   }
 
   &__container {
@@ -23,6 +28,10 @@
 
     @include tablet() {
       margin-top: 40px;
+    }
+
+    @include mobile() {
+      margin-top: 70px;
     }
   }
 }

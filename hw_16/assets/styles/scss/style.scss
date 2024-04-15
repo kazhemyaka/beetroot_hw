@@ -19,13 +19,13 @@ html {
 }
 
 @mixin tablet() {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     @content;
   }
 }
 
 @mixin mobile() {
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 660px) {
     @content;
   }
 }
@@ -41,7 +41,7 @@ html {
 }
 
 .main {
-  margin-bottom: 90px;
+  margin-bottom: 72px;
 }
 
 @function remify($value) {
@@ -58,7 +58,7 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(remify(30px), 4vw + 1rem, remify(48px));
+  font-size: clamp(1.875rem, 1.5536rem + 1.6071vw, 3rem);
   font-weight: 600;
   line-height: remify(64px);
   letter-spacing: remify(2.4px);

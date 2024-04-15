@@ -2,13 +2,17 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 42px;
 
     @include mobile() {
       gap: 30px;
     }
 
-    margin-bottom: 90px;
+    margin-bottom: 85px;
+
+    @include tablet() {
+      margin-bottom: 70px;
+    }
   }
 
   &__heading-container {
@@ -19,6 +23,13 @@
 
     @include mobile() {
       flex-wrap: wrap;
+    }
+  }
+
+  &__heading {
+    @include mobile() {
+      font-size: remify(28px);
+      letter-spacing: remify(1.4px);
     }
   }
 
@@ -51,9 +62,12 @@
     flex-basis: 33%;
     gap: 20px;
 
+    height: 500px;
+
     @include tablet() {
       display: flex;
       flex: 0 0 100%;
+      height: auto;
     }
 
     &--reverse {
@@ -61,7 +75,7 @@
     }
 
     @include mobile() {
-      flex-wrap: wrap-reverse;
+      flex-wrap: wrap;
     }
   }
 }
@@ -82,7 +96,12 @@
   &__tags,
   &__date {
     &--posts {
+      letter-spacing: remify(1.2px);
       margin: 0;
+
+      @include mobile() {
+        font-size: remify(16px);
+      }
     }
   }
 

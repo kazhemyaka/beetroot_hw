@@ -12,6 +12,19 @@
     font-size: remify(19px);
     line-height: remify(32px);
     letter-spacing: remify(0.95px);
+
+    &:first-of-type {
+      margin-bottom: 33px;
+
+      @include tablet() {
+        margin-bottom: 20px;
+      }
+    }
+
+    @include mobile() {
+      font-size: remify(18px);
+      letter-spacing: remify(0.9px);
+    }
   }
 
   &__heading {
@@ -22,13 +35,18 @@
       content: url("../../images/arrow-text.svg");
       display: block;
     }
+
+    @include mobile() {
+      font-size: remify(24px);
+      margin-bottom: -20px;
+    }
   }
 
   &__text {
     flex-basis: 40%;
 
     @include tablet() {
-      margin-top: 50px;
+      margin-top: 33px;
       text-align: right;
     }
 

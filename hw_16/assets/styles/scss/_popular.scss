@@ -1,6 +1,19 @@
 .popular {
   &__container {
     @extend .posts__container;
+    margin-bottom: 90px;
+
+    @include tablet() {
+      margin-bottom: 65px;
+    }
+
+    @include mobile() {
+      margin-bottom: 75px;
+    }
+  }
+
+  &__heading {
+    @extend .posts__heading;
   }
 
   &__heading-container {
@@ -14,6 +27,12 @@
   &__articles {
     display: flex;
     gap: 30px;
+    margin-bottom: 14px;
+
+    @include tablet() {
+      margin-bottom: none;
+      gap: 20px;
+    }
 
     @include mobile() {
       flex-wrap: wrap;
@@ -25,9 +44,14 @@
     flex-basis: 50%;
     gap: 20px;
 
+    @include tablet() {
+      height: 500px;
+    }
+
     @include mobile() {
       flex-wrap: wrap;
       flex-basis: 100%;
+      height: auto;
     }
   }
 
@@ -55,7 +79,24 @@
 
   &__heading {
     &--popular {
-      @extend .article__heading--posts;
+      font-size: remify(24px);
+      font-weight: 500;
+      line-height: 166%;
+      letter-spacing: remify(2.4px);
+
+      @include tablet() {
+        font-size: remify(22px);
+        letter-spacing: remify(2.2px);
+      }
+    }
+  }
+
+  &__text--mobile-visible {
+    display: none;
+
+    @include mobile() {
+      display: block;
+      margin-top: 10px;
     }
   }
 }

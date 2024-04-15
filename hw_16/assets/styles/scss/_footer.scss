@@ -1,10 +1,10 @@
 .footer {
   background-color: $light-grey-color;
-  padding-top: 70px;
+  padding-top: 88px;
   padding-bottom: 30px;
 
   @include tablet {
-    padding-top: 50px;
+    padding-top: 35px;
     padding-bottom: 50px;
   }
 
@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 
     @include tablet {
       flex-direction: column;
@@ -28,6 +28,7 @@
     @include mobile {
       font-size: remify(32px);
       letter-spacing: remify(1.6px);
+      margin-bottom: 10px;
     }
 
     @include tablet {
@@ -69,10 +70,19 @@
 
     &:first-of-type {
       margin-bottom: 10px;
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
     }
 
     @include tablet {
       text-align: center;
+    }
+
+    @include mobile {
+      font-size: remify(18px);
+      letter-spacing: remify(1.8px);
     }
   }
 
