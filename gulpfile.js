@@ -5,10 +5,10 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 
 function sassTask() {
-  return src("./hw_16/assets/styles/scss/style.scss")
+  return src("./hw_17/assets/styles/scss/style.scss")
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
-    .pipe(dest("./hw_16/assets/styles/css/"));
+    .pipe(dest("./hw_17/assets/styles/css/"));
 }
 
 function browsersyncServe(cb) {
@@ -26,8 +26,8 @@ function browsersyncReload(cb) {
 }
 
 function watchTask() {
-  watch("./hw_16/*.html", browsersyncReload);
-  watch("./hw_16/assets/styles/**/*.scss", series(sassTask, browsersyncReload));
+  watch("./hw_17/*.html", browsersyncReload);
+  watch("./hw_17/assets/styles/**/*.scss", series(sassTask, browsersyncReload));
 }
 
 exports.default = series(sassTask, browsersyncServe, watchTask);
