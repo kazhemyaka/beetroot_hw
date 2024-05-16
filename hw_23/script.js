@@ -89,7 +89,6 @@ console.log(displayFalseFirst(newShoppingList));
 // Підрахунок суми всіх (не) придбаних продуктів.
 // Показання продуктів в залежності від суми, (від більшого до меншого / від меншого до більшого, в залежності від параметра функції, який вона приймає)
 
-
 function sumOfAll(arr) {
   return arr.reduce((acc, item) => acc + item.sum, 0);
 }
