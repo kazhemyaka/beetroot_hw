@@ -4,31 +4,19 @@
 // Виводити весь список на екран таким чином, щоб спочатку йшли продукти, що ще не придбані, а потім - ті, що вже придбали.
 // Покупка продукту. Функція приймає назву продукту і відзначає його як придбаний.
 
-let shoppingList = [
-  {
-    name: "Apple",
-    quantity: 3,
-    isBought: false,
-    price: 5,
-  },
-  {
-    name: "Water",
-    quantity: 2,
-    isBought: true,
-    price: 3,
-  },
-  {
-    name: "Bread",
-    quantity: 1,
-    isBought: false,
-    price: 2,
-  },
-];
+function Product(name, quantity, isBought, price) {
+  this.name = name;
+  this.quantity = quantity;
+  this.isBought = isBought;
+  this.price = price;
+  this.sum = this.price * this.quantity;
+}
 
-shoppingList = shoppingList.map((item) => ({
-  ...item,
-  sum: item.price * item.quantity,
-}));
+let shoppingList = [
+  new Product("Apple", 2, false, 10),
+  new Product("Banana", 3, true, 5),
+  new Product("Orange", 1, false, 15),
+];
 
 function displayFalseFirst(arr) {
   return arr.sort((a, b) => a.isBought - b.isBought);
@@ -49,8 +37,8 @@ console.log(displayFalseFirst(shoppingList));
 
 // Норма
 // Видалення продукту зі списку (видалення повинно проводитися шляхом створення нового масиву, в якому продукт, що ми шукаємо, буде відсутнім)
-// Додавання покупки в список. Враховуй, що при додаванні покупки з уже існуючим в списку продуктом, 
-// необхідно збільшувати кількість в існуючій покупці, а не додавати нову. 
+// Додавання покупки в список. Враховуй, що при додаванні покупки з уже існуючим в списку продуктом,
+// необхідно збільшувати кількість в існуючій покупці, а не додавати нову.
 // При цьому також повинна змінитися сума, наприклад, якщо ціна за одиницю 12, а кількості товарів стало 2, то сума буде 24.
 
 function deleteProductByName(arr, name) {
@@ -60,23 +48,18 @@ function deleteProductByName(arr, name) {
 let newShoppingList = deleteProductByName(shoppingList, "Apple");
 
 function addProduct(arr, name, quantity, price) {
-  let isExist = false;
+  let isProductExist = false;
   arr.map((item) => {
     if (item.name === name) {
       item.quantity += quantity;
       item.sum = item.price * item.quantity;
-      isExist = true;
+      isProductExist = true;
     }
     return item;
   });
-  if (!isExist) {
-    arr.push({
-      name: name,
-      quantity: quantity,
-      isBought: false,
-      price: price,
-      sum: price * quantity,
-    });
+
+  if (!isProductExist) {
+    arr.push(new Product(name, quantity, false, price));
   }
 }
 
@@ -96,19 +79,23 @@ function sumOfAll(arr) {
 console.log(sumOfAll(newShoppingList));
 
 function sumOfAllBought(arr) {
-  return arr.filter((item) => item.isBought).reduce((acc, item) => acc + item.sum, 0);
+  return arr
+    .filter((item) => item.isBought)
+    .reduce((acc, item) => acc + item.sum, 0);
 }
 
 console.log(sumOfAllBought(newShoppingList));
 
 function sumOfAllNotBought(arr) {
-  return arr.filter((item) => !item.isBought).reduce((acc, item) => acc + item.sum, 0);
+  return arr
+    .filter((item) => !item.isBought)
+    .reduce((acc, item) => acc + item.sum, 0);
 }
 
 console.log(sumOfAllNotBought(newShoppingList));
 
 function sortProductsBySum(arr, isAsc) {
-  return arr.sort((a, b) => isAsc ? a.sum - b.sum : b.sum - a.sum);
+  return arr.sort((a, b) => (isAsc ? a.sum - b.sum : b.sum - a.sum));
 }
 
 console.log(sortProductsBySum(newShoppingList, true));
