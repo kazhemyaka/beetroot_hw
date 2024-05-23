@@ -12,14 +12,5 @@
   },
   "browserslist": [
     "last 2 versions"
-  ],
-  "dependencies": {
-    "prettier-plugin-stylus": "^0.1.0"
-  },
-  "prettier": {
-    "plugins": [
-      "prettier-plugin-stylus"
-    ],
-    "trailingComma": "all"
-  }
+  ]
 }
