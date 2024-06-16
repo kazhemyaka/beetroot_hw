@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "reset";
+@import "variables";
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1198px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+
+  @include tablet() {
+    font-size: 1.625rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+
+  @include tablet() {
+    font-size: 1.25rem;
+  }
+}
+
+.button {
+  padding: 0.9375rem 3.5625rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+
+  &--black {
+    border: 2px solid $black;
+  }
+
+  &--white {
+    border: 2px solid $white;
+    color: $white;
+  }
+
+  @include tablet() {
+    font-size: 1rem;
+    padding: 0.625rem 1.25rem;
+  }
+
+  &:hover {
+    border: 2px solid $tomato-light;
+    background-color: $tomato-light;
+    color: $white;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@import "header";
+@import "hero";
+@import "products";
+@import "partners";
+@import "footer";

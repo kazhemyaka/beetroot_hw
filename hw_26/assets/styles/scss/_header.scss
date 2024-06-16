@@ -1,0 +1,181 @@
+.header {
+  background-color: $brown-light;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 0.94rem;
+  }
+
+  &__nav {
+    z-index: 1000;
+
+    @include tablet() {
+      display: none;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: $brown-light;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  &__logo {
+    width: 11.375rem;
+    height: 2.125rem;
+
+    @include mobile() {
+      width: 6.25rem;
+      height: 1.1875rem;
+    }
+  }
+
+  &__search,
+  &__profile {
+    width: 2.25rem;
+    height: 2.25rem;
+
+    @include mobile() {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 2.37rem;
+
+    @include tablet() {
+      padding-block: 1.25rem;
+    }
+  }
+
+  &__search-and-profile {
+    display: flex;
+    gap: 1.88rem;
+
+    @include tablet() {
+      gap: 1.25rem;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;
+
+    span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: $black;
+      opacity: 1;
+      left: 0;
+      transition: 0.25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 16px;
+
+        @include mobile() {
+          top: 8px;
+        }
+      }
+
+      &:nth-child(3) {
+        top: 32px;
+
+        @include mobile() {
+          top: 16px;
+        }
+      }
+    }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          top: 16px;
+          transform: rotate(135deg);
+
+          @include mobile() {
+            top: 8px;
+          }
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          left: -60px;
+        }
+
+        &:nth-child(3) {
+          top: 16px;
+          transform: rotate(-135deg);
+
+          @include mobile() {
+            top: 8px;
+          }
+        }
+      }
+    }
+
+    @include tablet() {
+      display: block;
+    }
+
+    @include mobile() {
+      width: 1.375rem;
+      height: 1.25rem;
+    }
+  }
+
+  .nav {
+    &__list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      @include tablet() {
+        flex-direction: column;
+        gap: 1.25rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: normal;
+      display: block;
+      padding-block: 1.75rem;
+      padding-inline: 0.94rem;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $tomato-light;
+        color: $white;
+        transition: 0.3s ease-in-out;
+      }
+
+      @include laptop() {
+        padding-block: 1.25rem;
+      }
+    }
+  }
+}

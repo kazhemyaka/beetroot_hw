@@ -1,0 +1,154 @@
+.footer {
+  background-color: $brown-dark;
+  color: $brown-light;
+
+  &__container {
+    padding-top: 4.37rem;
+
+    @include laptop() {
+      padding-inline: 1.44rem;
+    }
+  }
+
+  &__logo {
+    width: 9.375rem;
+    height: 1.875rem;
+    margin-bottom: 2.19rem;
+    fill: $brown-light;
+
+    @include mobile() {
+      flex-basis: 100%;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__logo-and-nav {
+    @include tablet() {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 7.87rem;
+    }
+
+    @include mobile() {
+      width: 100%;
+      gap: 0;
+    }
+  }
+
+  &__contact {
+    @include mobile {
+      text-align: right;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      position: absolute;
+      top: 35%;
+      right: 0;
+    }
+  }
+
+  &__heading {
+    font-size: 1.625rem;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 3rem;
+
+    @include tablet() {
+      font-size: 1.25rem;
+      margin-bottom: 1.62rem;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2rem;
+
+    @include tablet() {
+      gap: 1.1rem;
+    }
+
+    @include mobile() {
+      margin-left: auto;
+    }
+  }
+
+  &__social-icon {
+    width: 1.875rem;
+    height: 1.875rem;
+    fill: $brown-light;
+    stroke: $brown-light;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      fill: $tomato-light;
+      stroke: $tomato-light;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &__phone {
+    font-size: 1.625rem;
+    font-weight: 500;
+    line-height: normal;
+    color: $brown-light;
+    margin-top: 2.22rem;
+    text-decoration: none;
+    display: block;
+
+    @include tablet() {
+      font-size: 1.25rem;
+      margin-top: 1.25rem;
+    }
+  }
+
+  &__copyright {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: normal;
+    display: block;
+    text-align: center;
+    padding-block: 3.13rem 1.25rem;
+
+    @include tablet() {
+      padding-block: 2.63rem 1.25rem;
+    }
+
+    @include mobile() {
+      padding-block: 3.06rem 1.25rem;
+    }
+  }
+
+  .nav {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.63rem;
+    }
+
+    &__link {
+      color: $brown-light;
+      text-decoration: none;
+      font-size: 1.25rem;
+      line-height: normal;
+      transition: 0.3s ease-in-out;
+
+      @include tablet() {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        color: $tomato-light;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+}
