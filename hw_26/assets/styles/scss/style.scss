@@ -56,11 +56,12 @@ h2 {
 
   &--black {
     border: 2px solid $black;
+    color: $black;
   }
 
   &--white {
-    border: 2px solid $white;
-    color: $white;
+    border: 2px solid $brown-light;
+    color: $brown-light;
   }
 
   @include tablet() {
@@ -71,7 +72,7 @@ h2 {
   &:hover {
     border: 2px solid $tomato-light;
     background-color: $tomato-light;
-    color: $white;
+    color: $brown-light;
     transition: 0.3s ease-in-out;
   }
 }
