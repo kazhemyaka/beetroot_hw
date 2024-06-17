@@ -16,7 +16,7 @@ searchBtn.addEventListener("click", () => {
 });
 
 function fetchMovies(query, type, page) {
-  const url = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${query}&type=${type}&page=${page}`;
+  const url = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${query}&type=${type}&page=${page}`;
 
   fetch(url)
     .then((response) => response.json())
@@ -80,7 +80,7 @@ function displayPagination(totalResults, currentPage) {
 }
 
 function fetchMovieDetails(imdbID) {
-  const url = `http://www.omdbapi.com/?apikey=${API_KEY}&i=${imdbID}`;
+  const url = `https://www.omdbapi.com/?apikey=${API_KEY}&i=${imdbID}`;
 
   fetch(url)
     .then((response) => response.json())
