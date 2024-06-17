@@ -4,17 +4,17 @@ const browsersync = require("browser-sync").create();
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 
-function sassTask() {
-  return src("./hw_26/assets/styles/scss/style.scss")
-    .pipe(sass())
-    .pipe(postcss([autoprefixer()]))
-    .pipe(dest("./hw_26/assets/styles/css/"));
-}
+// function sassTask() {
+//   return src("./hw_26/assets/styles/scss/style.scss")
+//     .pipe(sass())
+//     .pipe(postcss([autoprefixer()]))
+//     .pipe(dest("./hw_26/assets/styles/css/"));
+// }
 
 function browsersyncServe(cb) {
   browsersync.init({
     server: {
-      baseDir: "./hw_26/",
+      baseDir: "./hw_27/",
     },
   });
   cb();
@@ -26,9 +26,9 @@ function browsersyncReload(cb) {
 }
 
 function watchTask() {
-  watch("./hw_26/*.html", browsersyncReload);
-  watch("./hw_26/assets/js/*.js", browsersyncReload);
-  watch("./hw_26/assets/styles/**/*.scss", series(sassTask, browsersyncReload));
+  watch("./hw_27/*.html", browsersyncReload);
+  watch("./hw_27/*.js", browsersyncReload);
+  // watch("./hw_26/assets/styles/**/*.scss", series(sassTask, browsersyncReload));
 }
 
-exports.default = series(sassTask, browsersyncServe, watchTask);
+exports.default = series(browsersyncServe, watchTask);

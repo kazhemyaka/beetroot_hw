@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #pagination {
+        margin-top: 20px;
+      }
+
+      .details-btn {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>OMDb Search</h1>
+    <input type="text" id="search-input" placeholder="Enter title" />
+    <select name="search-type" id="search-type">
+      <option value="movie">Movie</option>
+      <option value="series">Series</option>
+      <option value="episode">Episode</option>
+    </select>
+    <button id="search-btn">Search</button>
+
+    <div id="movie-list"></div>
+    <div id="pagination"></div>
+    <div id="movie-details"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
