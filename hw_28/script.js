@@ -11,13 +11,13 @@ const fetchWeather = async () => {
   return data;
 };
 
-function displayWeather(data) {
+const displayWeather = (data) => {
   return `
     <h2>${data.name}</h2>
     <p>Description: ${data.weather[0].description}</p>
     <p>Temperature: ${data.main.temp}°C</p>
   `;
-}
+};
 
 const getWeather = async () => {
   const savedWeather = JSON.parse(localStorage.getItem("weathexrData"));
